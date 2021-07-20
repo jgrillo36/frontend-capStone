@@ -1,18 +1,33 @@
-
 import React from 'react';
+
+import Store from './components/Store'; //protect
+
+import BaseLayout from './components/layout/BaseLayout';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import  './assets/styles.scss';
+import {Provider} from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Route, Switch
+} from 'react-router-dom'
+import StoreItems from './components/StoreItems';
 
 const App = (props) => {
   return (
     
-    <div style={{height: "100vh"}} className="d-flex flex-column justify-content-center align-items-center">
-     <img height="100px" src="https://avatars.githubusercontent.com/u/67744643?s=200&v=4" alt=""/>
-     <h1 className="text-white">Client Side Authentication with JWTs</h1>
-     <br/>
-     <h3 className="text-warning">Learning about JWTs for React Authentication</h3>
+    <Provider store={store}>
+    <Router>
+      <BaseLayout>
+          <Switch>
 
-     <h5 className="text-info">This is an unprotected page.  Any user should be able to see this page, regardless of their login status.</h5>
-    </div>
-   
+            <Route exact path='/store' component={Store}/>
+            <Route path='/store/:id' component={StoreItems}/>
+
+          </Switch>
+      </BaseLayout>
+      </Router>
+      </Provider>
+  
   )
 }
 

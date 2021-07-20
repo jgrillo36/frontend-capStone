@@ -1,0 +1,238 @@
+.navBarFull{
+  /* position: absolute; */
+  height: 10%;
+
+}
+
+.navbarImage{
+  float: left;
+}
+
+.main-content-wrapper{
+    border: 0px solid  #2d2c2c;
+    background-color: gray;
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    color: white
+  }
+
+.footer{
+
+}
+.left-side-footer{
+  width: 50%;
+  float: left;
+  
+}
+.right-side-footer{
+  width: 50%;
+  float: right;
+  
+}
+
+/* store */
+
+.slide1store{
+  position: static;
+  width: 100%;
+  height: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.slide1-vide0{
+  min-width: 100%;
+}
+
+.slide2store{
+  background-color:white;
+  height: 45%;
+  width: 100%;
+  color: black;
+  top: 50%;
+  left: 50%;
+  position: static;
+}
+
+.slide2store-inner{
+  position: relative;
+  top: 50%;
+  text-align: center;
+}
+
+
+.slide4-store-inner{
+  height: 68vh;
+  text-align: center;
+  color: black;
+}
+
+
+.slide7store{
+  height: 75vh;
+  width: 100%;
+  position: relative;
+  z-index: -5;
+  /* overflow-y: hidden; */
+  /* text-align: center; */
+  background-image: url('./storePictures/slide7_480.jpeg');
+  background-size: cover;
+  background-position: bottom right;
+  /* text-align: center; */
+
+}
+.slide7store-inner{
+  /* background-color:black; */
+  /* height: 75vh; */
+  /* width: 100%; */
+  /* opacity: 0.55; */
+  text-align: center;
+  color: white;
+}
+.slide7store-innerText{
+  height: 100%;
+  text-align: center;
+  color: white;
+  z-index: 85;
+  /* opacity: 1; */
+  justify-content: center;
+}
+
+.slide8store{
+  height: 75vh;
+  width: 80%;
+  position: relative;
+  color: black;
+}
+
+.p-slide8-store{
+  text-align: center;
+  font-size: 20px;
+  vertical-align: baseline;
+  
+}
+
+.hrslide8store{
+  width: 100px;
+  border: 2px solid black;
+  text-align: center;
+}
+
+/* Individual Items */ 
+
+.main-content-item{
+  border: 0px solid  #2d2c2c;
+  background-size: cover;
+  margin: auto;
+  top: 0; left: 0; bottom: 0; right: 0;
+  color: white
+}
+
+.main-item-description-box{
+  
+}
+
+.fiskerInc-text{
+  opacity: 0.7;
+  font-size: 14px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.price-text{
+  font-size: 16px;
+  text-align: left;
+}
+
+.size-text{
+  font-size: 14px;
+  text-align: left;
+}
+
+.description-text{
+  font-size: 15px;
+  text-align: left;
+}
+
+.itemContent{
+  margin: 25px;
+  color: black;
+  text-align: center;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.cartButton{
+  background-color: white;
+  border: 1px solid black ;
+  width: 100%;
+  font-size: 12px;
+}
+.cartButton:hover{
+  background-color: grey;
+  opacity: 0.3;
+}
+
+.button-text{
+  margin: 10px;
+  text-align: center;
+  font-size: 12px;
+  z-index: 20;
+}
+
+@media only screen and (max-width: 768px) {
+  .fiskerInc-text, .price-text, .size-text, .itemContent{
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* Footer */
+
+.footer{
+  height: 45vh;
+  width: 100%;
+  background-color: #27393d;
+  position: relative;
+}
+
+.links-image-footer{
+  position: absolute;
+  height: 20px;
+  top: 35px;
+  left: 10px;
+}
+
+.links-footer{
+  text-align: center;
+  left: 10px;
+  color: white;
+}
+
+.link-style{
+  color: white;
+  font-size: 20px;
+}
+.link-style:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+.footerSocials{
+  align-items: center;
+  opacity: 1;
+  font-size: 20px;
+}
+
+.opacityText{
+  opacity: 0.7
+}
+
+
+.copyright-text{
+  opacity: 0.7;
+  font-size: 12px;
+}

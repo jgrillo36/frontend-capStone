@@ -1,8 +1,31 @@
-import React from "react";
+import React, {useState} from "react";
+import {useDispatch} from 'react-redux'
+import {useHistory} from "react-router-dom"
 import { Link } from 'react-router-dom'
+import {signIn} from '../../actions/index'
 
 
 const Signin = () => {
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const dispatch = useDispatch()
+  const history = useHistory()
+
+  const handleSubmit = (e)=>{
+    e.preventDefault()
+
+    //dispatch(signIn(param1, param2))
+    // dispatch an action
+    dispatch(signIn({
+      email: email,
+      password: password
+    }, ()=>{
+      console.log("User signed in successfully");
+      history.push('/feature')
+    }))
+  }
+
   return( 
   <div className="mt-5">
   
@@ -15,14 +38,14 @@ const Signin = () => {
 
         <h2>Sign In</h2>
 
-        <form action="" method="post" className="form">
+        <form onSubmit={handleSubmit} className="form">
 
             <div className="form__field">
-              <input type="email" placeholder="info@mailaddress.com" />
+              <input value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="info@mailaddress.com" />
             </div>
 
             <div className="form__field">
-              <input type="password" placeholder="••••••••••••" />
+              <input value={password} onChange={(e)=>setPassword(e.target.value)}  type="password" placeholder="••••••••••••" />
             </div>
 
             <div className="form__field">
