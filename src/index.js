@@ -12,7 +12,7 @@ import  './assets/styles.scss';
 import {applyMiddleware, createStore, compose} from 'redux';
 import {Provider} from 'react-redux';
 import reduxThunk from 'redux-thunk'
-import reducer from './reducers/reducer';
+import reducer from './reducers';
 import {
   BrowserRouter as Router,
   Route, Switch

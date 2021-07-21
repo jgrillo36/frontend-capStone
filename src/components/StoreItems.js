@@ -34,6 +34,7 @@ const storeItem = products.filter(item => {
   return (
     <>
       {storeItem.map((items) =>{
+        console.log(items.id)
         return(
         <div className="main-content-item">
           <div className="row pt-0 m-0">
