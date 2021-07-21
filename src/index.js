@@ -36,18 +36,7 @@ const store = createStore(
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-    <Router>
-      <BaseLayout>
-          <Switch>
-
-            <Route exact path='/store' component={Store}/>
-            <Route path='/store/:id' component={StoreItems}/>
-
-          </Switch>
-      </BaseLayout>
-      </Router>
-      </Provider>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );

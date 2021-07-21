@@ -9,38 +9,58 @@ let products = [
     id: 1,
     image: `${item1picSmaller}`,
     title: "Women's Crop Street T",
-    description1:
-      "Sustainably Made – 100% Organic Cotton.",
-    description2:
-      "Fabrics are knitted and dyed in Los Angeles.",
-    description3:
-      "Fabric travels less than 5 miles for production of the goods",
-    description4:
-      "G.O.T.S. Certified",
-    description5:
-      "",
-    description6:
-      "",
-    availableSizes: ["X", "L", "XL", "XXL"],
+    description: [
+      {
+      description1:
+        "Sustainably Made – 100% Organic Cotton.",
+      description2:
+        "Fabrics are knitted and dyed in Los Angeles.",
+      description3:
+        "Fabric travels less than 5 miles for production of the goods",
+      description4:
+        "G.O.T.S. Certified",
+      description5:
+        "",
+      description6:
+        "",
+      }],
+    availableSizes: [ 
+      {
+      XS: "XS", 
+      S: "S",
+      M: "M",
+      L:"L"
+      }
+      ],
     price: 30.00,
   },
   {
     id: 2,
     image: `${item2picSmaller}`,
     title: "Eco-Friendly Street Crewneck",
-    description1:
-      "100% Recycled Cotton.",
-    description2:
-      "99.5% Biodegradable. 14 oz. 100% Recycled Cotton Fleece. Made from reclaimed US-grown cotton manufacturing waste.",
-    description3:
-      "Made in Los Angeles, California.",
-    description4:
-      "G.O.T.S. Certified",
-    description5:
-      "Circular Manufacturer",
-    description6:
-      "Closed Loop Factory",
-    availableSizes: ["X", "M", "L"],
+    description: [
+      {
+        description1:
+        "100% Recycled Cotton.",
+        description2:
+        "99.5% Biodegradable. 14 oz. 100% Recycled Cotton Fleece. Made from reclaimed US-grown cotton manufacturing waste.",
+        description3:
+        "Made in Los Angeles, California.",
+      description4:
+        "G.O.T.S. Certified",
+      description5:
+        "Circular Manufacturer",
+      description6:
+        "Closed Loop Factory",
+      }],
+    availableSizes: [ 
+      {
+      XL: "XL", 
+      S: "S",
+      M: "M",
+      L:"L"
+      }
+      ],
     price: 89.00,
   },
   {
@@ -48,7 +68,17 @@ let products = [
     image: `${item2picSmaller}`,
     title: "Eco-Friendly Street Crewneck",
     description1:
-      "This is for all the latest trends, no matter who you are, where you're from and what you're up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
+    "100% Recycled Cotton.",
+    description2:
+    "99.5% Biodegradable. 14 oz. 100% Recycled Cotton Fleece. Made from reclaimed US-grown cotton manufacturing waste.",
+    description3:
+    "Made in Los Angeles, California.",
+  description4:
+    "G.O.T.S. Certified",
+  description5:
+    "Circular Manufacturer",
+  description6:
+    "Closed Loop Factory",
       
     availableSizes: ["X", "M", "L"],
     price: 89.00,
@@ -57,7 +87,7 @@ let products = [
     id: 4,
     image: `${item2picSmaller}`,
     title: "Eco-Friendly Street Crewneck",
-    description:
+    description1:
       "This is for all the latest trends, no matter who you are, where you're from and what you're up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
     availableSizes: ["X", "M", "L"],
     price: 89.00,
@@ -66,7 +96,7 @@ let products = [
     id: 5,
     image: `${item2picSmaller}`,
     title: "Eco-Friendly Street Crewneck",
-    description:
+    description1:
       "This is for all the latest trends, no matter who you are, where you're from and what you're up to. Exclusive to ASOS, our universal brand is here for you, and comes in all our fit ranges: ASOS Curve, Tall, Petite and Maternity. Created by us, styled by you.",
     availableSizes: ["X", "M", "L"],
     price: 89.00,
