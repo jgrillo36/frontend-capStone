@@ -4,17 +4,21 @@ import products from '../assets/data/storeItemsData'
 import {Link, useParams} from 'react-router-dom'
 import randomImages from '../assets/data/randomStoreItem'
 import Footer from './layout/Footer'
-import { loadProducts } from '../actions/products';
+
 
 
 const StoreItems = () => {
 
 const { id } = useParams();
 const [items, setItems] = useState([])
-const dispatch = useDispatch();
+const products = useSelector(state => state.products.items)
 const storeItem = products.filter(item => {
   return item.id == id 
 })
+
+// pulling down redux state
+// const productsPlaceholder = useSelector(state => state.products.items);
+// console.log("product placeholder", productsPlaceholder)
 
 const randomStoreItem1 = randomImages[Math.floor(Math.random()*randomImages.length)];
 const randomStoreItem2 = randomImages[Math.floor(Math.random()*randomImages.length)];
@@ -31,10 +35,17 @@ arr.forEach(lineOfText =>{
   output  += `${lineOfText}.\n\n`
 })
 
+// productsPlaceholder.map(product => {
+//   return (
+//     <div>
+//       {product.name}
+//     </div>
+//   )
+// })
 // let output = `${arr[0]}. \n\n${arr[0]}.`
 
 // console.log("description", descriptionItem)
-console.log("output", output)
+// console.log("output", output)
 
 // const itemDescription = products.filter(description =>{
 //   return description.description == description.id
@@ -43,7 +54,6 @@ console.log("output", output)
   useEffect(() =>{
       
     const itemsData = async () =>{
-      dispatch(loadProducts());
       setItems(products)
     }
     itemsData();
@@ -58,6 +68,9 @@ console.log("output", output)
   // console.log("random image", randomStoreItem3)
   // console.log("random image", randomStoreItem4)
 
+console.log("description", products.description)
+
+
   return (
     <>
       {storeItem.map((items) =>{
@@ -70,7 +83,7 @@ console.log("output", output)
             </div>
             <div className="main-item-description-box col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column mt-0 pt-0 overflow-hidden">
               <div className="itemContent">
-                <h3>{items.title}</h3> 
+                <h3>{items.name}</h3> 
                 <p className="fiskerInc-text">by Fisker Inc.</p>
                 <p className="price-text"><b>${items.price}.00 </b></p> 
                 <p className="size-text"><b>SIZE:</b> </p> 
@@ -78,7 +91,7 @@ console.log("output", output)
                   <p className="button-text"><b>Add To Cart</b></p></button>
                   <br />
                   <br />
-                  <p className="description-text">{output}</p> 
+                  <p className="description-text">{items.description}</p> 
 
 
 

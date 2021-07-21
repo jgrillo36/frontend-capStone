@@ -28,7 +28,6 @@ import StoreItems from './components/StoreItems';
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
   reducer,
-  {},
   composeEnhancers(applyMiddleware(reduxThunk))
 );
 
@@ -36,7 +35,11 @@ const store = createStore(
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <Router>
+        <App />
+      </Router>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
