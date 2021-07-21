@@ -5,12 +5,11 @@ export const loadProducts = () => async dispatch => {
   
     try {
       const response = await axios.get('/products/all');
-      console.log(response);
       
-    //   dispatch({
-    //     type: "AUTH_USER", 
-    //     data: response.data.token
-    //   })
+      dispatch({
+        type: LOAD_PRODUCTS, 
+        payload: response.data.data
+      })
   
     }
     catch(err){

@@ -1,11 +1,10 @@
 import React, {useEffect, useState} from 'react'
 import {useSelector, useDispatch} from 'react-redux'
-import {loadProducts} from '../actions/productAction'
 import products from '../assets/data/storeItemsData'
 import {Link, useParams} from 'react-router-dom'
-import {addToCart} from '../actions/cartActions';
 import randomImages from '../assets/data/randomStoreItem'
 import Footer from './layout/Footer'
+import { loadProducts } from '../actions/products';
 
 
 const StoreItems = () => {
@@ -44,7 +43,7 @@ console.log("output", output)
   useEffect(() =>{
       
     const itemsData = async () =>{
-      
+      dispatch(loadProducts());
       setItems(products)
     }
     itemsData();
@@ -75,7 +74,7 @@ console.log("output", output)
                 <p className="fiskerInc-text">by Fisker Inc.</p>
                 <p className="price-text"><b>${items.price}.00 </b></p> 
                 <p className="size-text"><b>SIZE:</b> </p> 
-                <button className="cartButton" onClick={()=> dispatch(addToCart(items))}>
+                <button className="cartButton">
                   <p className="button-text"><b>Add To Cart</b></p></button>
                   <br />
                   <br />

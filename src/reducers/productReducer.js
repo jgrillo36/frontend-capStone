@@ -13,7 +13,7 @@ const productReducer = (state, action) => {
         case LOAD_PRODUCTS:
             return {
                 ...state, 
-                items: action.products
+                items: action.payload
             }
 
         default:
