@@ -1,9 +1,10 @@
 import React, {useState, useEffect} from "react";
-import "../assets/styles.scss";
+import "../../assets/styles.scss";
+import "../../assets/users.scss";
 import { useHistory } from "react-router-dom";
 
 
-const Forms = (props) => {
+const LoginForm = (props) => {
 
     const {setUser, setLoggedIn} = props;
 
@@ -29,7 +30,7 @@ const Forms = (props) => {
             phoneNumber: phoneNumber
         }
 
-    const response = await fetch('https://whiskers-backend.herokuapp.com', {
+    const response = await fetch('http://localhost:3001/users/newuser', {
         method: "POST",
         headers: {"Content-Type" : "application/json"},
         body: JSON.stringify(data)
@@ -53,15 +54,6 @@ const Forms = (props) => {
 
     <form className="forms forms-grid forms-div" onSubmit={handleForm}>
 
-
-
-
-    <input className="forms forms-grid forms-bgd html" type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value)} placeholder="First Name"/>
-
-    <input className="forms forms-grid forms-bgd" type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} placeholder="Last Name"/>
-
-    <input className="forms forms-grid forms-bgd" type="integer" value={phoneNumber} onChange={(e)=>setPhoneNumber(e.target.value)} placeholder="Mobile phone"/>
-
     <input className="forms forms-grid forms-bgd" type="text" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="e-mail address"/>
 
     <input className="forms forms-grid forms-bgd" type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="password"/>
@@ -74,4 +66,4 @@ const Forms = (props) => {
     </>;
 };
 
-export default Forms;
+export default LoginForm;

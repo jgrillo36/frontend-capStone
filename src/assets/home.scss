@@ -1,0 +1,62 @@
+.main-content-wrapper{
+    display: block;
+    margin: 0px;
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+}
+.teaser{
+
+}
+.navBarFull{
+
+}
+.splash{
+    position: relative;
+    height: 100vh;
+    background: rgb(0, 0, 0);
+    z-index: 0;
+}
+body{
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    color: rgb(255, 255, 255);
+    outline: none;
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    inset: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
+.pacific{
+
+}
+.hero-img{
+    line-height: 1.15;
+    text-size-adjust: 100%;
+    font-family: aktiv-grotesk;
+    font-weight: 300;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    outline: none;
+    bottom: 0px !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 0;
+    height: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: cover; 
+}

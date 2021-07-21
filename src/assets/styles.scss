@@ -19,7 +19,7 @@
     width: 30%;
     height: 100%;
     float: left;
-    background-color: 37,52,55,0.8;
+    background: linear-gradient( rgba(37,52,55,0.8),rgba(37,52,55,0.6) 50%,transparent );
     opacity: 1;
     text-align: left;
 }
@@ -76,7 +76,7 @@ z-index: 1;}
     -ms-letter-spacing: 0.06em;
     letter-spacing: 0.06em;
     margin-bottom: 16px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
