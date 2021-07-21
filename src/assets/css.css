@@ -130,8 +130,42 @@
   color: white
 }
 
-.main-item-description-box{
+.store-item-slide3{
+  background-color:white;
+  height: 50vh;
+  width: 100%;
+  color: black;
+  top: 50%;
+  position: static;
+}
+.store-item-slide3-inner{
+
+  text-align: center;
+}
+
+.store-item-slide4{
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
   
+}
+.store-item-slide4-inner{
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding: 1px;
+}
+/* .store-item-slide4-inner-inner{
+  width: 50%;
+  height: 50%;
+  color: black;
+} */
+
+.randomImage{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .fiskerInc-text{
