@@ -19,7 +19,7 @@ const Login = (props) => {
                                 <div class="row m-l-0 m-r-0">
                                     <div class="col-sm-8">
                                         <div class="card-block">
-                                            <h3>Login</h3>
+                                            <p className="register-alt-text">Login</p>
                                             <LoginForm user={user} loggedIn={loggedIn} setUser={setUser} setLoggedIn={setLoggedIn}/>
                                         </div>
                                     </div>

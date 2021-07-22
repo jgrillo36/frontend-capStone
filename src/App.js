@@ -1,7 +1,6 @@
 
 import './App.css';
 import React, {useState} from 'react';
-import ReactDOM from 'react-dom';
 import Signup from './components/actions/signup';
 import Home from './components/Home';
 import Users from './components/actions/users';
@@ -22,7 +21,7 @@ function App() {
     <Router>
       <BaseLayout>
           <Switch>
-            <Route exact path='/home' >
+            <Route exact path='/' >
               <Home />
             </Route>
             <Route path='/signup'>

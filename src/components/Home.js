@@ -2,7 +2,7 @@ import React from 'react';
 // import Header from './layout/Header';
 import "../assets/home.scss";
 
-const Home =  () => {
+const Home = (props) => {
 
     return <>
         <div className="main-wrapper">
