@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from './layout/Header';
+// import Header from './layout/Header';
 import "../assets/home.scss";
 
 const Home =  () => {
@@ -10,7 +10,7 @@ const Home =  () => {
 
             </div>
             <div className="navBarFull">
-                <Header />
+                {/* <Header /> */}
             </div>
             <div className="body">
                 <div className="pacific">

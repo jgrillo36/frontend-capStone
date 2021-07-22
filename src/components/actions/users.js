@@ -26,6 +26,7 @@ const Users = (props) => {
                             <div class="card-block text-center text-white">
                                 {/* <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image" /> </div> */}
                                 <h6 class="f-w-600">{user.firstName}</h6>
+                                <h6 class="f-w-600">{user.lastName}</h6>
                                 <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                             </div>
                         </div>
@@ -35,18 +36,18 @@ const Users = (props) => {
                                 <div class="row">
                                     <div class="col-sm-6">
                                         <p class="m-b-10 f-w-600">Email</p>
-                                        <h6 class="text-muted f-w-400">rntng@gmail.com</h6>
+                                        <h6 class="text-muted f-w-400">{user.email}</h6>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p class="m-b-10 f-w-600">Phone</p>
-                                        <h6 class="text-muted f-w-400">98979989898</h6>
+                                        <p class="m-b-10 f-w-600">Phone Number</p>
+                                        <h6 class="text-muted f-w-400">{user.phoneNumber}</h6>
                                     </div>
                                 </div>
-                                <ul class="social-link list-unstyled m-t-40 m-b-10">
+                                {/* <ul class="social-link list-unstyled m-t-40 m-b-10">
                                     <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="facebook" data-abc="true"><i class="mdi mdi-facebook feather icon-facebook facebook" aria-hidden="true"></i></a></li>
                                     <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="twitter" data-abc="true"><i class="mdi mdi-twitter feather icon-twitter twitter" aria-hidden="true"></i></a></li>
                                     <li><a href="#!" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="instagram" data-abc="true"><i class="mdi mdi-instagram feather icon-instagram instagram" aria-hidden="true"></i></a></li>
-                                </ul>
+                                </ul> */}
                             </div>
                         </div>
                     </div>

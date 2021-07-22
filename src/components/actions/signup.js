@@ -31,7 +31,7 @@ const signUp = (props) => {
                                         <div class="col-sm-8">
                                             <div class="card-block">
                                                 <h3>Sign up</h3>
-                                                    <Forms user={user} loggedIn={loggedIn} setUser={setUser} setLoggedIn={setLoggedIn}/>
+                                                    {/* <Forms user={user} loggedIn={loggedIn} setUser={setUser} setLoggedIn={setLoggedIn}/> */}
                                             </div>
                                         </div>
                                     </div>
