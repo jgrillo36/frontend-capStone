@@ -16,7 +16,7 @@ import '../../assets/css.css'
 const Header = () => {
   return (
     <>
-        <Navbar fixed="top" bg="transparent" expand="lg" z-index="99">
+        <Navbar fixed="top" bg="light" expand="lg" z-index="99">
             <Container w-100>
                 <Navbar.Brand id="navbarImage" href="/"><img src={fiskerText} height="20px" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>

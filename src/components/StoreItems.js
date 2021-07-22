@@ -25,31 +25,39 @@ const randomStoreItem2 = randomImages[Math.floor(Math.random()*randomImages.leng
 const randomStoreItem3 = randomImages[Math.floor(Math.random()*randomImages.length)];
 const randomStoreItem4 = randomImages[Math.floor(Math.random()*randomImages.length)];
 
-let description = "lksjfalksdf. klajsdlfkjas .alskdjfaljksdf i.f ioj4f34f. "
 
-let arr = description.split(".")
-console.log(arr)
+let descriptionOfItem = storeItem.map((description)=>{
+  return description.description.toString()
+})
+console.log("description of item", descriptionOfItem)
+
+let description = descriptionOfItem.join()
+console.log("description", description)
+
+let arr = description.split(". ")
 let output = ""
 
-arr.forEach(lineOfText =>{
-  output  += `${lineOfText}.\n\n`
+let newArr = arr.map((el) =>{
+  return <p> {el} </p>
 })
 
-// productsPlaceholder.map(product => {
-//   return (
-//     <div>
-//       {product.name}
-//     </div>
-//   )
-// })
-// let output = `${arr[0]}. \n\n${arr[0]}.`
+// for (let i = 0; i < arr.length; i++){
+//   arr[i] = <p> {arr[i]} </p>
+// }
 
-// console.log("description", descriptionItem)
+// arr = arr.join("")
+// console.log("arr", arr)
+
+
+
+// arr.forEach(lineOfText =>{
+//   output  += `${lineOfText}` + ""  
+// })
+
+// let output1 = `${arr[0]}. \n\n${arr[0]}.`
+
 // console.log("output", output)
 
-// const itemDescription = products.filter(description =>{
-//   return description.description == description.id
-// })
 
   useEffect(() =>{
       
@@ -68,8 +76,6 @@ arr.forEach(lineOfText =>{
   // console.log("random image", randomStoreItem3)
   // console.log("random image", randomStoreItem4)
 
-console.log("description", products.description)
-
 
   return (
     <>
@@ -86,20 +92,13 @@ console.log("description", products.description)
                 <h3>{items.name}</h3> 
                 <p className="fiskerInc-text">by Fisker Inc.</p>
                 <p className="price-text"><b>${items.price}.00 </b></p> 
-                <p className="size-text"><b>SIZE:</b> </p> 
+                <p className="size-text"><b>SIZE: {items.size}</b> </p> 
                 <button className="cartButton">
                   <p className="button-text"><b>Add To Cart</b></p></button>
                   <br />
                   <br />
-                  <p className="description-text">{items.description}</p> 
+                  <p className="description-text">{newArr}</p> 
 
-
-
-                  <p className="description-text">{items.description2}</p> 
-                  <p className="description-text">{items.description3}</p> 
-                  <p className="description-text">{items.description4}</p> 
-                  <p className="description-text">{items.description5}</p> 
-                  <p className="description-text">{items.description6}</p> 
                   
                 <p className="description-text">*Orders shipped outside of the United States may be subject to import taxes, customs duties, and fees levied by the destination country/region.</p>
 
