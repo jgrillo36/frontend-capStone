@@ -1,6 +1,6 @@
-
-import React, {useEffect, useState} from 'react'
-import {useSelector, useDispatch} from 'react-redux'
+import React, {useEffect} from "react";
+import { useDispatch } from 'react-redux'
+import {Link} from 'react-router-dom'
 import slide3pic600 from '../assets/storePictures/slide3-600.jpeg'
 import slide3pic860 from '../assets/storePictures/slide3-860.jpeg'
 import slide3pic960 from '../assets/storePictures/slide3-960.jpeg'
@@ -11,18 +11,17 @@ import CarouselOne from './FirstCarousel'
 import CarouselTwo from './SecondCarousel'
 import fiskerText from '../assets/Fisker_logo_white.png'
 import Footer from './layout/Footer'
-import {loadProducts} from '../actions/products'
+import { loadProducts } from '../actions/products';
 
 
 
 const Store = () => {
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   useEffect(() =>{
     dispatch(loadProducts());
   }, [])
-  
   return (
     <div className="main-content-wrapper">
       <div className="slide1store">
