@@ -1,6 +1,7 @@
 import React from "react";
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import {formatCurrency} from '../components/utils';
+import {removeFromCart} from '../actions/cartActions';
 import Fade from 'react-reveal/Fade';
 
 const CartItems = () => {
@@ -8,6 +9,7 @@ const CartItems = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
     const numberOfItems = useSelector(state => state.cart.numberOfItems);
     const totalCosts = useSelector(state => state.cart.totalCosts);
+    const dispatch = useDispatch();
 
   return <>
     <div>
@@ -29,17 +31,17 @@ const CartItems = () => {
 
                     <div className="d-flex">
                             <div>
-                                <img src={item.image} alt={item.title} />
+                                <img src={item.image} alt={item.name} height="200px"/>
                             </div>
 
                             <div>
-                                {item.title}
+                                {item.name}
                             </div>
                     </div>
 
                     <div className="">
-                        {formatCurrency(item.price)} X {item.count}
-                        <button className="btn btn-warning" onClick={()=> dispatch(removeFromCart(product))}>Remove</button>
+                        ${item.price} X {item.count}
+                        <button className="btn btn-warning" onClick={()=> dispatch(removeFromCart(item))}>Remove</button>
                     </div>
                 </div>
             })}

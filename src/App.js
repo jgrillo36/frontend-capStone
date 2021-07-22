@@ -15,28 +15,13 @@ import StoreItems from './components/StoreItems';
 
 const App = (props) => {
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
-const store = createStore(
-  reducer,
-  {},
-  composeEnhancers(applyMiddleware(reduxThunk))
-);
-
   return (
-    
-    <Provider store={store}>
-    <Router>
       <BaseLayout>
           <Switch>
-
             <Route exact path='/store' component={Store}/>
             <Route path='/store/:id' component={StoreItems}/>
-
           </Switch>
       </BaseLayout>
-      </Router>
-      </Provider>
-  
   )
 }
 
