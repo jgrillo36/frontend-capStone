@@ -12,6 +12,7 @@ import CarouselTwo from './SecondCarousel'
 import fiskerText from '../assets/Fisker_logo_white.png'
 import Footer from './layout/Footer'
 import { loadProducts } from '../actions/products';
+import Header2 from './layout/Header2'
 
 
 
@@ -24,21 +25,24 @@ const Store = () => {
   }, [])
 
   return (
-    <div className="main-content-wrapper">
+    <div className="">
+      <div>
+      <Header2 />
+      </div>
       <div className="slide1store">
-
-        <iframe src="https://player.vimeo.com/video/567578136?background=1" width="100%" height="700px" frameborder="0" allow="autoplay"></iframe>
+        <iframe src="https://player.vimeo.com/video/567578136?background=1" width="100%" height="700px" max-width="100%" overflow="hidden" frameborder="0" allow="autoplay"></iframe>
       </div>
       <div className="slide2store">
+        
         <div className="slide2store-inner">
           <h3> <b>Welcome to Fisker Edition</b> </h3>
         </div>
       </div>
       <div className="row ps-light pt-0 m-0">
-        <div className="col-md-6 col-sm-12 d-flex align-items-center justify-content-center overflow-hidden">
+        <div className="slide4-main col-md-6 col-sm-12 d-flex align-items-center justify-content-center overflow-hidden">
           <img src={slide3pic600} srcSet={`${slide3pic600} 480w, ${slide3pic860} 720w, ${slide3pic960} 960w, ${slide3pic1440} 1440w, ${slide3pic1920} 1920w`} ></img>
         </div>
-        <div className="col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column mt-0 pt-0 overflow-hidden">
+        <div className="slide4-main col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column mt-0 pt-0 overflow-hidden">
           <div className="slide4-store-inner">
             <h3>Shop the look</h3>
               <CarouselOne />
@@ -46,10 +50,10 @@ const Store = () => {
         </div>
       </div>
       <div className="row ps-light pt-0 m-0">
-        <div className="col-md-6 col-sm-12 d-flex align-items-center justify-content-center overflow-hidden">
+        <div className="slide4-main col-md-6 col-sm-12 d-flex align-items-center justify-content-center overflow-hidden">
           <img src={slide5pic960} srcSet=""></img>
         </div>
-        <div className="col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column mt-0 pt-0 overflow-hidden">
+        <div className="slide4-main col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column mt-0 pt-0 overflow-hidden">
           <div className="slide4-store-inner">
             <h3>Shop the look</h3>
               <CarouselTwo />
@@ -78,7 +82,7 @@ const Store = () => {
             <p className="p-slide8-store">We’re here to reimagine not only how we move through the world, but our place within it.</p>
           </div>
         </div>
-        <Footer />
+        
     </div>
 
   )};

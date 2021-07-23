@@ -6,13 +6,9 @@ import Header2 from "./Header2"
 const BaseLayout = (props) => {
   return (
     <>
-      <Header2 />
-      {/* <Footer /> */}
       {props.children}
 
-      <br />
-      <br />
-     
+      <Footer />
     </>
   );
 };

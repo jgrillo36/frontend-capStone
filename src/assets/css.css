@@ -13,6 +13,7 @@
 body,
 html {
   margin-top: 0px;
+
 }
 
 header .NavBarContainer {
@@ -32,7 +33,19 @@ header .NavBarContainer {
   width: 100%;
   padding: 10px;
   transition: top 0.6s;
+  color: black;
 }
+.headroomLinks{
+  color: black;
+  font-size: 24px;
+
+}
+.headroomLinks:hover{
+  color: rgb(228, 38, 38);
+  font-size: 24px;
+  
+}
+
 
 .headroom--hidden{
   top: -50px;
@@ -44,34 +57,7 @@ header .NavBarContainer {
 .headroom--unpinned {
   top: -40%
 }
-.notfound {
-  font-family: proxima-nova;
-  padding-top: 100px;
-  min-width: 100%;
-  min-height: 100%;
-  background: rgba(0, 0, 0, .5)
-}
-.notfound h1 {
-  margin-top: 8%;
-  display: block;
-  text-align: center;
-  font-weight: 700;
-  color: #fff
-}
-.notfound h5 {
-  display: block;
-  text-align: center;
-  font-weight: 100;
-  color: #fff
-}
-.notfound span {
-  display: block;
-  text-align: center;
-  font-size: 700%;
-  color: #00aeef;
-  font-weight: 700;
-  outline: #fff 1px
-}
+
 
 .main-content-wrapper{
     border: 0px solid  #2d2c2c;
@@ -83,9 +69,7 @@ header .NavBarContainer {
     color: white
   }
 
-.footer{
 
-}
 .left-side-footer{
   width: 50%;
   float: left;
@@ -100,11 +84,7 @@ header .NavBarContainer {
 /* store */
 
 .slide1store{
-  position: static;
-  width: 100%;
-  height: auto;
-  overflow-y: hidden;
-  overflow-x: hidden;
+  height: 700px;
 }
 
 .slide1-vide0{
@@ -113,7 +93,7 @@ header .NavBarContainer {
 
 .slide2store{
   background-color:white;
-  height: 45%;
+  height: 45vh;
   width: 100%;
   color: black;
   top: 50%;
@@ -127,6 +107,9 @@ header .NavBarContainer {
   text-align: center;
 }
 
+.slide4-main{
+  height: 80vh;
+}
 
 .slide4-store-inner{
   height: 68vh;
@@ -184,6 +167,11 @@ header .NavBarContainer {
   border: 2px solid black;
   text-align: center;
 }
+.hrCart{
+  width: 100%;
+  border: 1px solid black;
+  text-align: center;
+}
 
 /* Individual Items */ 
 
@@ -193,6 +181,11 @@ header .NavBarContainer {
   margin: auto;
   top: 0; left: 0; bottom: 0; right: 0;
   color: white
+}
+
+.main-item-description-box{
+  background-color: white;
+  height: 120vh;
 }
 
 .store-item-slide3{
@@ -259,8 +252,9 @@ header .NavBarContainer {
   margin: 25px;
   color: black;
   text-align: center;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding-left: 10%;
+  padding-right: 10%;
+  overflow: hidden;
 }
 
 .cartButton{
@@ -289,10 +283,59 @@ header .NavBarContainer {
   }
 }
 
+/* Cart */
+
+.cartMain{
+  background-color: white;
+  color: black;
+  text-align: center;
+  height: 45vh;
+  overflow: auto;
+
+}
+
+.cart-items{
+  background-color: white;
+  padding-top: 10px;
+}
+
+.cart-items-text{
+  font-size: 20px;
+}
+.cart-remove-text{
+  font-size: 12px;
+}
+
+.cart-image{
+  height: 165px;
+  float: left;
+}
+
+.cart-items-inner{
+  background-color: white;
+  font-size: 24px;
+  padding: 2px;
+  overflow-y: auto;
+}
+.cart-items-inner-picture{
+
+  float: left;
+}
+
+.cart-items-price-and-amount{
+  font-size: 14px;
+  padding-top: 10%;
+}
+.cartItemDeleteButton{
+  background-color: white;
+  font-size: 20px;
+  border: none;
+}
+
 /* Footer */
 
 .footer{
-  height: 45vh;
+  height: 35vh;
   width: 100%;
   background-color: #27393d;
   position: relative;

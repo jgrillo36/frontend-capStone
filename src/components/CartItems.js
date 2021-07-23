@@ -1,50 +1,29 @@
 import React from "react";
-import {useSelector} from 'react-redux';
+import {useSelector, useDispatch} from 'react-redux';
 import {formatCurrency} from '../components/utils';
-import Fade from 'react-reveal/Fade';
+import {removeFromCart} from '../actions/cartActions';
 
 const CartItems = () => {
 
     const cartItems = useSelector(state => state.cart.cartItems);
     const numberOfItems = useSelector(state => state.cart.numberOfItems);
-    const totalCosts = useSelector(state => state.cart.totalCosts);
+    const totalCosts = useSelector(state => state.cart.totalCost);
+    const dispatch = useDispatch();
 
   return <>
-    <div>
-        {cartItems.length === 0 
-            ?
-            <div>Cart is empty</div>
 
-            : 
-            <div>
-                You have <em>{numberOfItems}</em> items in the cart
-            </div>
-        }
-    </div>
-
-        <Fade left cascade>
-        <div className="row cart-items">
-            {cartItems.map(item =>{
-                return <div key={item.id} className="col-12 d-flex flex-column">
-
-                    <div className="d-flex">
-                            <div>
-                                <img src={item.image} alt={item.title} />
-                            </div>
-
-                            <div>
-                                {item.title}
-                            </div>
-                    </div>
-
-                    <div className="">
-                        {formatCurrency(item.price)} X {item.count}
-                        <button className="btn btn-warning" onClick={()=> dispatch(removeFromCart(product))}>Remove</button>
-                    </div>
+    <div className="cart-items">
+        {cartItems.map(item =>{
+            return <div key={item.id} className="cart-items-main">
+                <div className="cart-items-inner">
+                    <img className="cart-image"src={item.image} alt={item.name} height="165px"/>
+                    <p><b>{item.name}</b></p>
+                        ${item.price}.00 x {item.count} <br></br>
+                        <span className="cart-remove-text">Remove Item: </span><button className="cartItemDeleteButton" onClick={()=> dispatch(removeFromCart(item))}>X</button>
                 </div>
-            })}
-        </div>
-        </Fade>
+            </div>
+        })}
+    </div>
   </>;
 };
 

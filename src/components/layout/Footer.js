@@ -11,10 +11,10 @@ const Footer = () => {
           <div className="footer col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column mt-0 pt-0">
               <img className="links-image-footer" src={fiskerText} />
             <div className="links-footer">
-              <Link className="link-style" href="/about">About</Link> <br/>
-              <Link className="link-style" href="/about">Store</Link> <br/>
-              <Link className="link-style" href="/about">Register</Link> <br/>
-              <Link className="link-style" href="/about">Login</Link> <br/>
+              <Link className="link-style" to="/about">About</Link> <br/>
+              <Link className="link-style" to="/store">Store</Link> <br/>
+              <Link className="link-style" to="/register">Register</Link> <br/>
+              <Link className="link-style" to="/login">Login</Link> <br/>
                     
           </div>
         </div>

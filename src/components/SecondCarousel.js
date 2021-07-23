@@ -17,7 +17,7 @@ const StoreCarouselTwo = () => {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <Link to="/store/5"> 
+        <Link to="/store/13"> 
         <img
           className="d-block w-100"
           src={FiskerMensT}
@@ -27,7 +27,7 @@ const StoreCarouselTwo = () => {
           </Link>
       </Carousel.Item>
       <Carousel.Item>
-        <Link to="store/6">
+        <Link to="store/14">
         <img
           className="d-block w-100"
           src={FiskerWomensTShirt}
@@ -36,7 +36,7 @@ const StoreCarouselTwo = () => {
           </Link>
       </Carousel.Item>
       <Carousel.Item>
-        <Link to="store/7">
+        <Link to="store/15">
         <img
           className="d-block w-100"
           src={Sweatshirt}
@@ -45,7 +45,7 @@ const StoreCarouselTwo = () => {
         </Link>
       </Carousel.Item>
       <Carousel.Item>
-        <Link  to="store/8">
+        <Link  to="store/16">
         <img
           className="d-block w-100"
           src={FiskerHat}

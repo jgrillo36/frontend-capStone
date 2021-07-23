@@ -1,5 +1,5 @@
 $base-bgcolor: white;
-$base-color: #7e8ba3;
+$base-color: black;
 $base-font-weight: 300;
 $base-font-size: 1.69rem;
 $base-line-height: 1.5;
@@ -99,11 +99,16 @@ svg {
   vertical-align: middle;
 }
 
-$link-color: #7e8ba3;
+$link-color: black;
 
 a {
   color: $link-color;
 }
+a:hover{
+  text-decoration: underline;
+  color: black;
+}
+
 
 .register {
   box-shadow: 0 0 250px #000;
