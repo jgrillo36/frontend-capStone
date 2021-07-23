@@ -4,3 +4,4 @@ export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
 
 
+export const AUTH_USER = "AUTH_USER";

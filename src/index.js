@@ -1,27 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import Welcome from './components/Welcome';
-import Store from './components/Store'; //protect
-import Signin from './components/auth/Signin';
-import Signout from './components/auth/Signout';
-import Signup from './components/auth/Signup';
-import BaseLayout from './components/layout/BaseLayout';
-import './assets/css.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import  './assets/styles.scss';
-import {applyMiddleware, createStore, compose} from 'redux';
 import {Provider} from 'react-redux';
+import {applyMiddleware, createStore, compose} from 'redux';
 import reduxThunk from 'redux-thunk'
 import reducer from './reducers';
-import {
-  BrowserRouter as Router,
-  Route, Switch
-} from 'react-router-dom'
-import requireAuth from './requireAuth'
-import RequireAuthHooks from './RequireAuthHooks'
-import StoreItems from './components/StoreItems';
-
 
 
 // initializing redux store
@@ -33,13 +16,10 @@ const store = createStore(
 );
 
 
-
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
-      <Router>
-        <App />
-      </Router>
+    <Provider store={store} >
+      <App />
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')
