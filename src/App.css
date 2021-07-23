@@ -27,7 +27,7 @@
 }
 body{
   display: block;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: absolute;
   inset: 0;
   box-sizing: border-box;

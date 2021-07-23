@@ -26,7 +26,7 @@ function App() {
     <Router>
       <BaseLayout>
           <Switch>
-            <Route path='/store' component={Store}/>
+            <Route exact path='/store' component={Store}/>
             <Route path='/store/:id' component={StoreItems}/>
             <Route exact path='/' >
               <Home />
