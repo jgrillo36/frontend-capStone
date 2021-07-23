@@ -1,6 +1,6 @@
 import React from 'react';
-import Forms from '../Forms';
-import "../../assets/styles.scss";
+import Forms from './Forms';
+import "../assets/styles.scss";
 
 
 const signUp = (props) => {

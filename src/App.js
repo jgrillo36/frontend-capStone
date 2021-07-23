@@ -1,9 +1,9 @@
 
 import './App.css';
 import React, {useState} from 'react';
-import Signup from './components/actions/signup';
+import Signup from './components/SignUp';
 import Home from './components/Home';
-import Users from './components/actions/users';
+import Users from './components/users';
 import BaseLayout from './components/layout/BaseLayout';
 import {
   BrowserRouter as Router,

@@ -2,10 +2,12 @@ import React, {useState, useEffect} from "react";
 import "../../assets/styles.scss";
 import "../../assets/users.scss";
 import { useHistory } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { signIn } from "../../actions/users";
 
 
 const LoginForm = (props) => {
-
+    const dispatch = useDispatch();
     const {setUser, setLoggedIn} = props;
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -21,22 +23,10 @@ const LoginForm = (props) => {
             email: email,
             password: password
         }
+        dispatch(signIn(data, ()=>{
+            history.push("/users")
 
-    const response = await fetch('http://localhost:3001/users/login', {
-        method: "POST",
-        headers: {"Content-Type" : "application/json"},
-        body: JSON.stringify(data)
-    })
-
-
-    const receivedData = await response.json();
-        setUser(receivedData)
-        setLoggedIn(true)
-        setEmail("")
-        setPassword("")
-        history.push("/users")
-
-    }
+    }))};
 
     return <>
 <form className="forms forms-grid forms-div" onSubmit={handleForm}>

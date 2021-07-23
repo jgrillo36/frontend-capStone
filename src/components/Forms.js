@@ -2,16 +2,19 @@ import React, {useState, useEffect} from "react";
 import "../assets/styles.scss";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {signUp } from '../actions/users';
+
 
 
 const Forms = (props) => {
-
+    const dispatch = useDispatch();
     const {setUser, setLoggedIn} = props;
 
     const [firstName, setFirstName] = useState('');
     const [lastName, setLastName] = useState('');
 //   const [isValid, setIsValid] = useState(false);
-    const [phoneNumber, setPhoneNumber] = useState();
+    const [phoneNumber, setPhoneNumber] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const history = useHistory();
@@ -29,24 +32,24 @@ const Forms = (props) => {
             password: password,
             phoneNumber: phoneNumber
         }
+    dispatch(signUp(data, ()=>{
+        history.push("/users")
+    }))
+    // const response = await fetch('https://whiskers-backend.herokuapp.com/users/newuser', {
+    //     method: "POST",
+    //     headers: {"Content-Type" : "application/json"},
+    //     body: JSON.stringify(data)
+    // })
 
-    const response = await fetch('http://localhost:3001/users/newuser', {
-        method: "POST",
-        headers: {"Content-Type" : "application/json"},
-        body: JSON.stringify(data)
-    })
-
-    console.log(response)
-    const receivedData = await response.json();
-    console.log(receivedData)
-        setUser(receivedData)
-        setLoggedIn(true)
+    // console.log(response)
+    // const receivedData = await response.json();
+    // console.log(receivedData)
+        // setLoggedIn(true)
         setFirstName("")
         setLastName("")
         setEmail("")
         setPassword("")
         setPhoneNumber("")
-        history.push("/users")
 
     }
 

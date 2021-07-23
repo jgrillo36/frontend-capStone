@@ -1,11 +1,26 @@
 import React from 'react';
-import "../../assets/styles.scss";
-import "../../assets/users.scss";
+import { useSelector, useDispatch } from 'react-redux';
+import { signOut } from '../actions/users';
+import { useHistory } from 'react-router-dom';
+import "../assets/styles.scss";
+import "../assets/users.scss";
 
-const Users = (props) => {
-    
-    const {user, loggedIn} = props;
+const Users = () => {
+const dispatch = useDispatch();
+const history = useHistory();
+const user = useSelector(state => state.user.currentUser)
     console.log(user)
+
+const handleLogout = () => {
+    dispatch(
+        signOut(() => {
+          history.push("/");
+        })
+      );
+
+    }
+    
+
 
     return <>
     <div className="main-wrapper background">
@@ -37,7 +52,7 @@ const Users = (props) => {
                                     </div>
                                     <br />
                                     <div className="col-sm-6">
-                                        <button className="button">
+                                        <button className="button" onClick={handleLogout}>
                                             Logout
                                         </button>
                                     </div>
