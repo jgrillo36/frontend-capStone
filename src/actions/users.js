@@ -25,10 +25,10 @@ export const signIn = (formData, cbRedirect) => async (dispatch) => {
     }});
     console.log('response', response)
     const currentUser = {
-        firstName: response.data.firstName,
-        lastName: response.data.lastName,
-        email: response.data.email,
-        phoneNumber: response.data.phoneNumber
+        firstName: response.data.currentUser.firstName,
+        lastName: response.data.currentUser.lastName,
+        email: response.data.currentUser.email,
+        phoneNumber: response.data.currentUser.phoneNumber
     }
 console.log("current user", currentUser)
     dispatch({ type: AUTH_USER, data: {auth: true, currentUser: currentUser }});
