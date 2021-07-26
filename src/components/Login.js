@@ -35,6 +35,9 @@ const Login = (props) => {
 
     return <>
     <Header2 />
+    <br />
+    <br />
+
     <div>
     <div className="main-wrapper background">
         <div className="left-side">
