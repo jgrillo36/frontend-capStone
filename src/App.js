@@ -15,6 +15,7 @@ import {
 import Login from './components/Login';
 import StoreItems from './components/StoreItems';
 import Store from './components/Store'; 
+import Homepage from './components/Homepage'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
     <Router>
       <BaseLayout>
           <Switch>
+            <Route exact path ="/" component={Homepage}/>
             <Route exact path='/store' component={Store}/>
             <Route path='/store/:id' component={StoreItems}/>
             <Route exact path='/' >
