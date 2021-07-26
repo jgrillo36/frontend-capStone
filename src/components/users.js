@@ -26,10 +26,9 @@ const handleLogout = () => {
 
     return <>
      <Header2 />
-     <br />
-     <br />
-
     <div className="main-wrapper background">
+     <br />
+     <br />
         <div className="left-side">
             <div className="form-padding">
                 <p className="register-alt-text f-w-600">At Fisker we love our customers!</p>
