@@ -1,13 +1,14 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
-import "../../assets/css.css"
-import fiskerText from '../../assets/Fisker_logo_white.png'
+import React from 'react';
+import {Link} from 'react-router-dom';
+import "../../assets/css.css";
+import 'bootstrap/dist/css/bootstrap.css';
+import fiskerText from '../../assets/Fisker_logo_white.png';
 
 
 const Footer = () => {
-  return (
-    <>
-      <div className="row pt-0 m-0">
+
+  return (<>
+      <div className="row pt-0 m-0" fixed="bottom">
           <div className="footer col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column mt-0 pt-0">
               <img className="links-image-footer" src={fiskerText} />
             <div className="links-footer">
@@ -37,7 +38,6 @@ const Footer = () => {
           </div>
         </div>
     </>
-  )
-}
+  )};
 
-export default Footer
+export default Footer;

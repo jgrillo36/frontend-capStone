@@ -38,6 +38,7 @@
 }
 
 .card-block {
+    margin-top: 300px;
     padding: 1.25rem
 }
 
@@ -120,21 +121,15 @@ h6 {
 .m-t-40 {
     margin-top: 20px
 }
-
-.user-card-full .social-link li {
-    display: inline-block
+.m-t-200 {
+    margin-top: 200px
 }
 
-.user-card-full .social-link li a {
-    font-size: 20px;
-    margin: 0 10px 0 0;
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out
-}
+
 .register-alt-text{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 24px;
+    font-size: 28px;
     line-height: 16px;
     color: #fff;
 }
@@ -149,4 +144,12 @@ h6 {
     padding-bottom: 15px;
     padding-right: 160px;
     text-align: left;
+}
+.form-padding{
+    padding-top: 0.5rem;
+    padding-left:1.5rem;
+}
+.form-padding-login{
+    padding-top: 10rem;
+    padding-left:1.5rem;
 }

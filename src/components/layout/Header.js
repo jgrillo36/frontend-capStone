@@ -50,15 +50,16 @@ export default class Header extends Component{
     render(){
 
         return (
+
             <Navbar className={`headroom${this.state.visible ? "" : " headroom--hidden" }`} bg="transparent" expand="lg" z-index="99">
                 <Container w-100>
-                    <Navbar.Brand id="navbarImage" href="/"><img src={fiskerText} height="20px" /></Navbar.Brand>
+                    <Navbar.Brand id="navbarImage" to="/"><img src="../../assets/Fisker_logo_black.png" height="20px" /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                     <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ml-auto">
                         <Link to="/about">About&nbsp;</Link>
                         <Link to="/store">Store&nbsp;</Link>
-                        <Link to="/register">Register&nbsp;</Link>
+                        <Link to="/signup">Sign-up&nbsp;</Link>
                         <Link to="/login">Login&nbsp;</Link>
                     </Nav>
                     </Navbar.Collapse>
