@@ -1,18 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { Provider } from "react-redux";
-import { applyMiddleware, compose, createStore } from "redux";
-import rootReducer from "./reducers";
-import reduxThunk from "redux-thunk";
+import {Provider} from 'react-redux';
+import {applyMiddleware, createStore, compose} from 'redux';
+import reduxThunk from 'redux-thunk'
+import reducer from './reducers';
 
 
 // initializing redux store
 // requires a reducer. Second argument is for redux dev-tools extension.
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
-  rootReducer,
-  {},
+  reducer,
   composeEnhancers(applyMiddleware(reduxThunk))
 );
 

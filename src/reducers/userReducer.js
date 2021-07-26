@@ -7,7 +7,7 @@ const INITIAL_STATE = {
         email: "",
         phoneNumber: ""
     },    
-    auth: ""
+    auth: false
 }
 
 const userReducer = (state = INITIAL_STATE, action) => {

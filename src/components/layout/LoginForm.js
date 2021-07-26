@@ -23,6 +23,7 @@ const LoginForm = (props) => {
             email: email,
             password: password
         }
+        console.log('data', data)
         dispatch(signIn(data, ()=>{
             history.push("/users")
 
@@ -33,7 +34,7 @@ const LoginForm = (props) => {
 
 <div className="row">
     <div className="col-sm-6">
-
+        <p  className="register-alt-text">Login</p>
             <div className="col-sm-6">
                 <input className="user-profile input" type="text" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="e-mail address"/>
             </div>
@@ -44,8 +45,8 @@ const LoginForm = (props) => {
             <br />
             <div className="col-sm-6">
                   {/* <p class="m-b-6 f-w-600">Phone Number</p> */}
-                <button className="button">
-                    <input type="submit" />
+                <button className="button" type="submit">
+                    Submit
                 </button>
             </div>
         </div>

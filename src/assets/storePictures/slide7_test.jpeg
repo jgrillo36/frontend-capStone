@@ -1,0 +1,102 @@
+.navBarFull{
+  /* position: absolute; */
+  height: 10%;
+
+}
+
+.navbarImage{
+  float: left;
+}
+
+.main-content-wrapper{
+    border: 0px solid  #2d2c2c;
+    background-color: gray;
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    color: white
+  }
+
+.footer{
+
+}
+.left-side-footer{
+  width: 50%;
+  float: left;
+  
+}
+.right-side-footer{
+  width: 50%;
+  float: right;
+  
+}
+
+/* store */
+
+.slide1{
+  position: static;
+  width: 100%;
+  height: auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.slide1-vide0{
+  min-width: 100%;
+}
+
+.slide2{
+  background-color:white;
+  height: 45%;
+  width: 100%;
+  color: black;
+  top: 50%;
+  left: 50%;
+  position: static;
+}
+
+.slide2-inner{
+  position: relative;
+  top: 50%;
+  text-align: center;
+}
+
+.slide3and4{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.slide3{
+float: left;
+display: grid;
+grid-template-columns: 1fr 1fr;
+    /* overflow-wrap: break-word; */
+    /* background-color: black;
+    /* opacity: 50%;
+    color: white; */
+}
+
+.slide4{
+  float: right;
+  height: 45vh;
+  width:50%;
+  color: black;
+  margin: auto;
+
+}
+
+.slide4-inner{
+  height: 45vh;
+  text-align: center;
+  color: black;
+}
+
+.slide7{
+  height: 45%;
+  background-color: white;
+  object-fit: cover;
+  overflow-y: hidden;
+}
+
+

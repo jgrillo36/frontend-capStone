@@ -1,37 +1,70 @@
-import React from 'react';
+import React, {useState, useEffect} from "react";
 import "../assets/styles.scss";
+import "../assets/forms.scss";
+import Footer from './layout/Footer';
 import "../assets/users.scss";
-import LoginForm from './layout/LoginForm';
+import { useHistory } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { signIn } from "../actions/users";
 
 
 const Login = (props) => {
 
-    const {user, setUser,loggedIn, setLoggedIn} = props;
+    const dispatch = useDispatch();
+    const {setUser, setLoggedIn} = props;
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const history = useHistory();
+
+    
+
+    const handleForm = async(e) => {
+
+    e.preventDefault()
+
+    let data = {
+            email: email,
+            password: password
+        }
+        console.log('data', data)
+        dispatch(signIn(data, ()=>{
+            history.push("/users")
+
+    }))};
 
     return <>
+    <div>
     <div className="main-wrapper background">
         <div className="left-side">
-            <div class="page-content page-container" id="page-content">
-                <div class="padding">
-                    <div class="row container d-flex justify-content-center">
-                        <div class="col-xl-6 col-md-12">
-                            <div class="card user-card-full">
-                                <div class="row m-l-0 m-r-0">
-                                    <div class="col-sm-8">
-                                        <div class="card-block">
-                                            <p className="register-alt-text">Login</p>
-                                            <LoginForm user={user} loggedIn={loggedIn} setUser={setUser} setLoggedIn={setLoggedIn}/>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div className="form-padding-login">
+            <form className="forms forms-grid forms-div" onSubmit={handleForm}>
+
+<div className="row">
+    <div className="col-sm-6">
+        <p  className="register-alt-text">Login</p>
+            <div className="col-sm-6">
+                <input className="user-profile input" type="text" value={email} onChange={(e)=>setEmail(e.target.value)} placeholder="e-mail address"/>
+            </div>
+            <br />
+            <div className="col-sm-6">
+                <input className="user-profile input" type="password" value={password} onChange={(e)=>setPassword(e.target.value)} placeholder="password"/>
+            </div>
+            <br />
+            <div className="col-sm-6">
+                  {/* <p class="m-b-6 f-w-600">Phone Number</p> */}
+                <button className="button" type="submit">
+                    Submit
+                </button>
             </div>
         </div>
     </div>
-
+    </form>
+            </div>
+        </div>
+       
+    </div>
+ <Footer />
+ </div>
         </>
 }
 
