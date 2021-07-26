@@ -57,6 +57,7 @@ const Login = (props) => {
                 </button>
             </div>
         </div>
+        {/* <Footer /> */}
     </div>
     </form>
             </div>

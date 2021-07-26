@@ -73,13 +73,15 @@ let newArr = arr.map((el) =>{
 
   return (
     <>
+    
       {storeItem.map((items) =>{
         console.log(items.id)
         return(
-        <div className="main-content-item">
+        <div className="">
           <div>
             <Header2 />
           </div>
+
           <div className="row pt-0 m-0">
             <div className="main-item-description-box col-md-6 col-sm-12 d-flex align-items-center justify-content-center flex-column mt-0 pt-0 overflow-hidden">
               <img src={items.image}></img>
@@ -102,7 +104,7 @@ let newArr = arr.map((el) =>{
                   {cartItems.length === 0 
                     ?
                     <div className="cart-items-text">Cart is empty</div>
-
+                    
                     : 
                     <div className="cart-items-text">
                         You have <em>{numberOfItems}</em> items in the cart
@@ -144,6 +146,7 @@ let newArr = arr.map((el) =>{
             </div>
           </div>
         </div>
+        
       )
       })}
     </>

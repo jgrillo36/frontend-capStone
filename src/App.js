@@ -18,7 +18,8 @@ import {
 import {useSelector} from 'react-redux';
 import Login from './components/Login';
 import StoreItems from './components/StoreItems';
-import Store from './components/store'; 
+import Store from './components/Store'; 
+import Homepage from './components/Homepage'
 import About from './components/AboutUs';
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
       {/* <BaseLayout> */}
       {/* <Header /> */}
           <Switch>
+            <Route exact path ="/" component={Homepage}/>
             <Route exact path='/store' component={Store}/>
             <Route path='/store/:id' component={StoreItems}/>
             <Route exact path='/' >

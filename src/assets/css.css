@@ -16,6 +16,151 @@ html {
 
 }
 
+.slide1-homepage{
+height: 100vh;
+background-image: url(https://img.fiskerinc.com/image/upload/f_auto,c_limit,w_1920,q_auto/carmel-web/hero/hero.jpg);
+background-position: right;
+}
+
+.slide1-homepage-container{
+  height: 100vh;
+  position: relative
+}
+
+.slide1-homepage-text{
+position: absolute;
+top: 50%;
+left:50%;
+transform: translate(-50%, -50%);
+float: right;
+}
+.slide1-homepage-text-price{
+  
+}
+.ocean-text{
+  color: white;
+  font-size: 75px;
+  font-family: serif sans-serif;
+}
+
+.text-to-right{
+  float: right;
+}
+.price-homepage-text{
+  color: white;
+  font-size: 24px;
+
+}
+.baseprice-homepage-text{
+  color: white;
+  opacity: 0.7;
+  float: right;
+  font-size: 10px;
+}
+.taxes-homepage-text{
+  color: white;
+  opacity: 0.7;
+  font-size: 8px;
+}
+
+.homepage-slider{
+ background-size: 100% 100%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  /* height: 100vh; */
+}
+.homepage-video{
+  background-size: 100% 100%;
+  position: relative;
+  margin: 0 auto;
+  height: 700px;
+  background-color: black;
+  z-index: 0
+}
+.video-container{
+  position: relative;
+  z-index: 0;
+}
+
+.homepage-video-topText{
+  color: white;
+  z-index: 1;
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif
+}
+.homepage-video-bottomText{
+  color: white;
+  z-index: 1;
+  position: absolute;
+  bottom: 15px;
+  right: 25px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif
+}
+
+.homepage-phoneSlide{
+  background-image: url(https://img.fiskerinc.com/image/upload/f_auto,c_limit,w_1080,q_auto/carmel-web/app/app-mobile.jpg);
+  height: 100vh;
+  /* position: absolute; */
+  background-position: center;
+}
+
+.homepage-brownbox{
+  background: rgba(60,46,34,0.8);
+  height: 40vh;
+  color: white;
+  overflow: hidden;
+}
+
+.homepage-brownbox-text{
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+ 
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;  
+    height: 100%;
+}
+.brownbox-smaller-text{
+  font-size: 16px;
+}
+
+.lastSlide-homepage{
+  height: 100vh;
+  background-image: url(https://img.fiskerinc.com/image/upload/f_auto,c_limit,w_1920,q_auto/carmel-web/coming-soon/coming-soon.jpg);
+  background-position: bottom center;
+  }
+  
+  .lastSlide-homepage-container{
+    height: 100vh;
+    position: relative
+  }
+
+.lastSlide-homepage-container{
+  height: 100vh;
+  position: relative
+}
+
+.lastSlide-homepage-text{
+text-align: center;
+}
+.lastSlide-homepage-text-price{
+  color: white;
+}
+
+
+
+.sliderMain{
+  height: 80vh;
+  position: relative;
+}
+
 header .NavBarContainer {
   position: relative;
   max-width: 1000px;
