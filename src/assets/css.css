@@ -97,7 +97,7 @@ float: right;
   z-index: 1;
   position: absolute;
   bottom: 15px;
-  right: 25px;
+  padding-left: 20px;
   font-size: 20px;
   font-family: Arial, Helvetica, sans-serif
 }
@@ -173,6 +173,8 @@ header .NavBarContainer {
 }
 .headroom {
   position: fixed;
+  background-color: pink;
+  background-color: transparent;
   top: 0;
   left:0;
   width: 100%;
@@ -183,6 +185,7 @@ header .NavBarContainer {
 .headroomLinks{
   color: black;
   font-size: 24px;
+  /* justify-content: end; */
 
 }
 .headroomLinks:hover{
@@ -434,7 +437,7 @@ header .NavBarContainer {
   background-color: white;
   color: black;
   text-align: center;
-  height: 45vh;
+  height: 35vh;
   overflow: auto;
 
 }
@@ -482,15 +485,16 @@ header .NavBarContainer {
 .footer{
   height: 35vh;
   width: 100%;
+  /* float: left; */
   background-color: #27393d;
   position: bottom;
 }
 
 .links-image-footer{
-  position: absolute;
   height: 20px;
-  top: 35px;
-  left: 10px;
+  /* top: 35px;
+  left: 50px; */
+  float: left;
 }
 
 .links-footer{
