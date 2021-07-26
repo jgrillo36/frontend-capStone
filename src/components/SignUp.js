@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {signUp } from '../actions/users';
-import Header2 from "./layout/Header";
+import Header2 from "./layout/Header2";
 import Footer from "./layout/Footer";
 
 

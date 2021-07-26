@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../components/layout/Header'
+import Footer from '../components/layout/Footer'
 import Header2 from '../components/layout/Header2'
 import HomepageSlider from './homePageSlider'
 import appStore from '../assets/homepagePictures/AppStore.png'
@@ -9,7 +10,7 @@ const Homepage = () => {
   return (
     <>
       <div>
-        <Header />
+        <Header2 />
         <div className="slide1-homepage">
               <div className="slide1-homepage-text">
                 <p className="ocean-text">O&nbsp;&nbsp;C&nbsp;&nbsp;E&nbsp;&nbsp;A&nbsp;&nbsp;N</p>
@@ -68,6 +69,7 @@ const Homepage = () => {
         </div>
 
             </div>
+          <Footer />
       </div>
     </>
   )

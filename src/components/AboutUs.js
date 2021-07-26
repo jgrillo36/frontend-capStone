@@ -2,8 +2,9 @@ import React from "react";
 import "../assets/users.scss";
 import "../assets/about.scss";
 import { Link } from "react-router-dom";
-import Header2 from "./layout/Header";
+import Header2 from "./layout/Header2";
 import Footer from "./layout/Footer";
+import Header from "./layout/Header"
 
 const About = () => {
     
@@ -25,8 +26,8 @@ const About = () => {
                         <h4 className="h4">Jennifer Grillo</h4>
                         <h6 className="h6">Queen of Project Management & Backend Magician</h6>
                         <ul>
-                            <li className="li"><Link className="li" to="https://github.com/jgrillo36">Github</Link></li>
-                            <li className="li"><Link className="li" to="https://www.linkedin.com/in/jenngrillo/">LinkedIn</Link></li>
+                            <li className="li"><a className="li" href="https://github.com/jgrillo36">Github</a></li>
+                            <li className="li"><a className="li" href="https://www.linkedin.com/in/jenngrillo/">LinkedIn</a></li>
                         </ul>
                     </div>
                     <br />
@@ -34,8 +35,8 @@ const About = () => {
                         <h4 className="h4">Bogdan Blach</h4>
                         <h6 className="h6">Backend Wizard & Database Voodoo</h6>
                         <ul>
-                            <li className="li"><Link className="li" to="https://github.com/bblach3">Github</Link></li>
-                            <li className="li"><Link className="li" to="http://www.linkedin.com/in/bogdanblach">LinkedIn</Link></li>
+                            <li className="li"><a className="li" href="https://github.com/bblach3">Github</a></li>
+                            <li className="li"><a className="li" href="http://www.linkedin.com/in/bogdanblach">LinkedIn</a></li>
                         </ul>
                     </div>
                     <br />
@@ -43,8 +44,8 @@ const About = () => {
                         <h4 className="h4">Jacob Nordstrom</h4>
                         <h6 className="h6">Store Sorcerer & CSS Mage</h6>
                         <ul>
-                            <li className="li"><Link className="li" to="https://github.com/jacobnordstrom9">Github</Link></li>
-                            <li className="li"><Link className="li" to="https://www.linkedin.com/in/jacob-nordstrom-a79296100/">LinkedIn</Link></li>
+                            <li className="li"><a className="li" href="https://github.com/jacobnordstrom9">Github</a></li>
+                            <li className="li"><a className="li" href="https://www.linkedin.com/in/jacob-nordstrom-a79296100/">LinkedIn</a></li>
                         </ul>
                     </div>
                     <br />
@@ -52,8 +53,8 @@ const About = () => {
                         <h4 className="h4">Jim Chamberlin</h4>
                         <h6 className="h6">Front End Serf & Car Dweeb</h6>
                         <ul>
-                            <li className="li"><Link className="li" to="https://github.com/jimcha924">Github</Link></li>
-                            <li className="li"><Link className="li" to="https://www.linkedin.com/in/james-chamberlin/">LinkedIn</Link></li>
+                            <li className="li"><a className="li" href="https://github.com/jimcha924">Github</a></li>
+                            <li className="li"><a className="li" href="https://www.linkedin.com/in/james-chamberlin/">LinkedIn</a></li>
                         </ul>
                     </div>
                     <br />
