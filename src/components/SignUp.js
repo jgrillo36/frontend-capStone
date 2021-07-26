@@ -60,10 +60,10 @@ const SignUp = (props) => {
 
     return <>
     <Header2 />
-    <br />
-    <br />
 
     <div className="main-wrapper background">
+    <br />
+    <br />
         <div className="left-side">
             <div className="form-padding">
                 <p className="register-alt-text f-w-600">Join the Fisker</p>

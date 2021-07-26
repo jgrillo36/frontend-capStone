@@ -35,11 +35,10 @@ const Login = (props) => {
 
     return <>
     <Header2 />
-    <br />
-    <br />
-
     <div>
     <div className="main-wrapper background">
+    <br />
+    <br />
         <div className="left-side">
             <div className="form-padding-login">
             <form className="forms forms-grid forms-div" onSubmit={handleForm}>

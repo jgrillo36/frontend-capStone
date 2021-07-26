@@ -13,7 +13,8 @@ const About = () => {
         <>
         <Header2 />
         <div className="main-wrapper background-about">
-
+            <br />
+            <br />
                 <div className="right-side">
                 <div className="row">
                     <div className="col-md-12">
