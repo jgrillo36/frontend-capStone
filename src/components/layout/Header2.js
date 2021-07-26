@@ -50,7 +50,7 @@ export default class Header2 extends Component{
     render(){
 
         return (
-        <Navbar className={`headroom${this.state.visible ? "" : " headroom--hidden" }`} expand="lg" z-index="99">
+        <Navbar className={`headroom${this.state.visible ? "" : " headroom--hidden" }`} expand="lg">
             <Container w-100>
                 <Navbar.Brand id="navbarImage" href="/"><img src={fiskerTextBlack} height="30px" /></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
