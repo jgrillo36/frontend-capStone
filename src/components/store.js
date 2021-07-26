@@ -27,7 +27,6 @@ const Store = () => {
   return (
     <div className="">
       <div>
-      {/* <Header2 /> */}
       </div>
       <div className="slide1store">
         <iframe src="https://player.vimeo.com/video/567578136?background=1" width="100%" height="700px" max-width="100%" overflow="hidden" frameborder="0" allow="autoplay"></iframe>
