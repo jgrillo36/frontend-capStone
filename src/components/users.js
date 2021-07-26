@@ -26,6 +26,9 @@ const handleLogout = () => {
 
     return <>
      <Header2 />
+     <br />
+     <br />
+
     <div className="main-wrapper background">
         <div className="left-side">
             <div className="form-padding">
