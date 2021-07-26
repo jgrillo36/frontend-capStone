@@ -82,7 +82,7 @@ const Store = () => {
             <p className="p-slide8-store">We’re here to reimagine not only how we move through the world, but our place within it.</p>
           </div>
         </div>
-        
+        <Footer />
     </div>
 
   )};

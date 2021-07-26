@@ -2,6 +2,7 @@ import React from "react";
 import {useSelector, useDispatch} from 'react-redux';
 import {formatCurrency} from '../components/utils';
 import {removeFromCart} from '../actions/cartActions';
+import CheckOut from "./Checkout";
 
 const CartItems = () => {
 
