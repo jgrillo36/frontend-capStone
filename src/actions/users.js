@@ -23,14 +23,15 @@ export const signIn = (formData, cbRedirect) => async (dispatch) => {
     // "Access-Control-Allow-Origin": "*", 
     // "Accept": "application/json" 
     }});
+    console.log('response', response)
     const currentUser = {
-        firstName: response.data.currentUser.firstName,
-        lastName: response.data.currentUser.lastName,
-        email: response.data.currentUser.email,
-        phoneNumber: response.data.currentUser.phoneNumber
+        firstName: response.data.firstName,
+        lastName: response.data.lastName,
+        email: response.data.email,
+        phoneNumber: response.data.phoneNumber
     }
-    console.log("response", response)
-    dispatch({ type: AUTH_USER, data: {auth: response.data.token, currentUser }});
+console.log("current user", currentUser)
+    dispatch({ type: AUTH_USER, data: {auth: true, currentUser: currentUser }});
     cbRedirect();
   } catch (err) {
 

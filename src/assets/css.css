@@ -338,7 +338,7 @@ header .NavBarContainer {
   height: 35vh;
   width: 100%;
   background-color: #27393d;
-  position: relative;
+  position: bottom;
 }
 
 .links-image-footer{
