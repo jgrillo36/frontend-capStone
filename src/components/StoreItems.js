@@ -7,6 +7,7 @@ import {addToCart} from '../actions/cartActions';
 import CartItems from './CartItems'
 import Footer from './layout/Footer'
 import Header2 from './layout/Header2'
+import {Modal, Button} from 'react-bootstrap'
 
 
 
@@ -18,6 +19,11 @@ const products = useSelector(state => state.products.items)
 const storeItem = products.filter(item => {
   return item.id == id 
 })
+
+const [show, setShow] = useState(false)
+const handleClose = () => setShow(false)
+const handleShow = () => setShow(true)
+
 
 console.log("products", products)
 console.log("storeItem", storeItem)
@@ -114,7 +120,28 @@ let newArr = arr.map((el) =>{
               <div className="cartMain"> 
                 <CartItems />
               </div>
+              <br />
               <div>
+                <button className="cartButton" onClick={(e)=>{handleShow(e)}}>CheckOut</button>
+                <Modal show={show} onHide={handleClose}>
+                  <Modal.Header closeButton>
+                    <Modal.Title className="text-dark"><b>CHECKOUT</b></Modal.Title>
+                  </Modal.Header>
+                <Modal.Body>
+                  <p> Thank you for your purchase of ${totalCosts}. <br />
+                  <br />
+                  Team Whiskers appreciates your purchase. 
+                  <br />
+                  <br />
+                  Your money will go towards saving stray cats in eastern Bangkok!
+                  </p>
+                </Modal.Body>
+                  <Modal.Footer>
+                    <Button variant="secondary" onClick={handleClose}>
+                      Close
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
               </div>
               </div>
             </div>
@@ -145,6 +172,7 @@ let newArr = arr.map((el) =>{
               </div>
             </div>
           </div>
+          <Footer />
         </div>
         
       )

@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import {signUp } from '../actions/users';
-import Header2 from "./layout/Header";
+import Header2 from "./layout/Header2";
 import Footer from "./layout/Footer";
 
 
@@ -60,7 +60,10 @@ const SignUp = (props) => {
 
     return <>
     <Header2 />
+
     <div className="main-wrapper background">
+    <br />
+    <br />
         <div className="left-side">
             <div className="form-padding">
                 <p className="register-alt-text f-w-600">Join the Fisker</p>

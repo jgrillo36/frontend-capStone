@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import "../assets/styles.scss";
 import "../assets/forms.scss";
 import Footer from './layout/Footer';
+import Header2 from './layout/Header2';
 import "../assets/users.scss";
 import { useHistory } from "react-router-dom";
 import { useDispatch } from 'react-redux';
@@ -33,8 +34,11 @@ const Login = (props) => {
     }))};
 
     return <>
+    <Header2 />
     <div>
     <div className="main-wrapper background">
+    <br />
+    <br />
         <div className="left-side">
             <div className="form-padding-login">
             <form className="forms forms-grid forms-div" onSubmit={handleForm}>
